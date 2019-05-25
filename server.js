@@ -1,11 +1,15 @@
-//var express=require('express');
-const debug = require("debug")("node-angular");
+const express = require('express');
+const path = require('path');
 
-var app = require("./backend/app");
-port=3000
+const app = express();
 
-app.set("port",port)
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/pizzabuz'));
 
-const http = require("http");
-const server=http.createServer(app)
-server.listen(port)
+app.get('/*', function(req,res) {
+    
+res.sendFile(path.join(__dirname+'/dist/<name-of-app>/index.html'));
+});
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
