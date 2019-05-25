@@ -1,0 +1,17 @@
+<H1 align="center">List of all pizzas</H1>
+<table align="center" border="1">
+  <tr><th>Sr. No</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Description</th>
+  </tr>
+  
+  <tr *ngFor="let piz of pizza let i=index">
+  <td>{{i+1}}</td>
+  <td>{{piz.name}}</td>
+<td>{{piz.type}}</td>
+<td>{{piz.price}}</td>
+<td>{{piz.description}}</td>
+</tr>
+</table>

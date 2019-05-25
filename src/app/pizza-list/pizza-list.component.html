@@ -1,0 +1,15 @@
+<mat-accordion multi="true" *ngIf='pizza.length>0'>
+    <mat-expansion-panel *ngFor="let pizzalist of pizza">
+        <mat-expansion-panel-header>
+           {{pizzalist.Name}}
+        </mat-expansion-panel-header>
+           {{pizzalist.Details}}
+           <mat-action-row>
+            <button mat-button>Edit</button>
+            <button mat-button>Delete</button>
+            </mat-action-row>
+    </mat-expansion-panel>
+   
+</mat-accordion>
+
+<p class="info-text mat-body-1"  *ngIf='pizza.length <=0'>No post Created yet</p>

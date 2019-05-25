@@ -1,0 +1,48 @@
+
+<div align="center">
+    <h1>Pizza Request</h1>
+      <form name="form1" action="" method="POST">
+    <table>
+      <tr>
+        <td>
+      <label >Enter Pizza Name:</label>
+        </td>
+        <td>
+        <input type="text" name="name"  [(ngModel)]="pname">
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <label >Enter Pizza Type:</label>
+        </td>
+        <td>
+        <input type="text" name="designation" [(ngModel)]="ptype">
+      </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label >Enter Pizza Price:</label>
+        </td>
+        <td>
+        <input type="text" name="price" [(ngModel)]="pprice">
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <label >Additional Descrption:</label>
+        </td>
+        <td>
+        <textarea name="comment" form="usrform" [(ngModel)]="ddes">Enter text here...
+         </textarea>
+      </td>
+      </tr>
+
+      <tr>
+          <td colspan="2" align="center">
+            <input class="btn btn-primary" type="submit" value="Submit" (click)="saveval()">
+          </td>
+        </tr>
+    </table>
+    </form>
+    </div>

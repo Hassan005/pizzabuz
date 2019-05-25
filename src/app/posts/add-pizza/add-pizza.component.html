@@ -1,0 +1,23 @@
+<!-- <h2>Add  the pizza component</h2> -->
+<mat-card>
+        <mat-form-field>
+                        <textarea  matInput type="text" [(ngModel)]="pizza_name"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+                <textarea matInput cols="30" rows="6" [(ngModel)]="pizza_details"  ></textarea>
+        </mat-form-field>
+        <button (click)="onPizzaAdded()" mat-raised-button class="btn btn-primary">Submit</button>
+</mat-card>
+
+<ul class="list-group">
+        <li class="list-group-item" *ngFor='let user of users'>
+              <!-- {{user}}   -->
+        </li>
+</ul>
+
+        
+
+        
+
+
+
